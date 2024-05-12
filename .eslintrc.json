@@ -1,3 +1,21 @@
-{
-  "extends": "next/core-web-vitals"
+
+{  
+  "env": {
+    "commonjs": true, 
+    "es6": true
+  },
+  "extends": [
+    "next/core-web-vitals", 
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended"
+  ], 
+  "plugins": ["tailwindcss"],
+  "parser": "@typescript-eslint/parser",
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js"],
+      "parser": "@typescript-eslint/parser"
+    }
+  ]
 }
